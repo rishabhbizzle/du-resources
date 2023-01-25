@@ -1,0 +1,32 @@
+{
+  "subjectID": "63066b819cbab109372b8256",
+  "subject": "Statistics",
+  "books": [
+    {
+      "id": "63066b819cbab109372b8256",
+      "type": "Book",
+      "name": "Statistics for Management and Economics",
+      "url": "https://data-storage.sgp1.digitaloceanspaces.com/DTU/Operations%20Research%20H.A.%20Taha.pdf"
+    },
+    {
+      "id": "63066b819cbab109372b8256",
+      "type": "Book",
+      "name": "Infrential Statistics",
+      "url": "https://data-storage.sgp1.digitaloceanspaces.com/DTU/Operations%20Research%20H.A.%20Taha.pdf"
+    }
+  ],
+  "notes": [
+    {
+      "id": "63066b819cbab109372b8256",
+      "type": "Notes",
+      "name": "Statistics Notes - 1",
+      "url": "https://data-storage.sgp1.digitaloceanspaces.com/DTU/Operations%20Research%20H.A.%20Taha.pdf"
+    },
+    {
+      "id": "63066b819cbab109372b8256",
+      "type": "Notes",
+      "name": "Statistics Notes - 2",
+      "url": "https://data-storage.sgp1.digitaloceanspaces.com/DTU/Operations%20Research%20H.A.%20Taha.pdf"
+    }
+  ]
+}

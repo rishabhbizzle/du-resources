@@ -1,0 +1,28 @@
+{
+  "courseID": "63066b819cbab109372b8256",
+  "course": "Bachelors Of Business Economics (BBE)",
+  "firstyear": [
+    {
+      "subject": "Statistics",
+      "semester": "1",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "English",
+      "semester": "1",
+      "desc": "hello temp description"
+    }
+  ],
+  "secondyear": [
+    {
+      "subject": "Economics",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Maths",
+      "semester": "3",
+      "desc": "hello temp description"
+    }
+  ]
+}
