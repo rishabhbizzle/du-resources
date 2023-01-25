@@ -6,7 +6,7 @@ import path from 'path';
 export default async function handler(req, res) {
   // console.log
   // console.log(req.query)
-  fs.readFile(`data/${req.query.course}.json`, 'utf-8', (err, data) => {
+  fs.readFile(`jsondata/${req.query.course}.json`, 'utf-8', (err, data) => {
     if (err){
       console.log(err)
       return res.status(404).json({"error": true, "message": "Course not found"})
