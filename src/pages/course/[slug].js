@@ -84,7 +84,7 @@ export async function getServerSideProps(context) {
   // const router = useRouter();
   const slug = context.query.slug;
 
-  let api = await fetch(`http://localhost:3000/api/getCourse?course=${slug}`);
+  let api = await fetch(`https://du-resources.vercel.app/api/getCourse?course=${slug}`);
   console.log(api.status);
   let data = await api.json();
   return {
