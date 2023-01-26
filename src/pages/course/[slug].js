@@ -103,10 +103,6 @@ export async function getServerSideProps(context) {
   return {
     props: {data} , // will be passed to the page component as props
   };
-  // let api = await fetch(`http://localhost:3000/api/getCourse?course=${slug}`);
-  // // console.log(api.status);
-  // let data = await api.json();
-  
 }
 
 export default Slug;

@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { Books } from "components/Books";
 import { Notes } from "components/Notes";
 import Error from "next/error";
+import { promises as fs } from 'fs';
+import path from 'path';
 import Link from "next/link";
 
 const Sub = (props) => {
@@ -65,11 +67,20 @@ export async function getServerSideProps(context) {
   // console.log(context.query)
   let sub = context.query.sub;
   sub = sub.toLowerCase();
-  let api = await fetch(
-    `http://localhost:3000/api/getSubjectResources?sub=${sub}`
-  );
-  let data = await api.json();
-  console.log(data);
+  const jsonDirectory = path.join(process.cwd(), 'jsondata');
+  let data = {}
+  try {
+    const contents = await fs.readFile(jsonDirectory + `/${sub}.json`, 'utf-8');
+    data = JSON.parse(contents);
+
+  } catch (error) {
+    data = {error: true};
+  }
+  // let api = await fetch(
+  //   `http://localhost:3000/api/getSubjectResources?sub=${sub}`
+  // );
+  // let data = await api.json();
+  // console.log(data);
   return {
     props: { data }, // will be passed to the page component as props
   };

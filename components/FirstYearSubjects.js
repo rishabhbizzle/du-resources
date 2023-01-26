@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export const FirstYearSubjects = ({ data }) => {
   const router = useRouter();
-  console.log(router);
+  // console.log(router);
   const array = data.firstyear;
   return (
     <div className="">
