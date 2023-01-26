@@ -170,6 +170,11 @@
       "subject": "Marketing Analytics",
       "semester": "6",
       "desc": "hello temp description"
+    },
+    {
+      "subject": "Statistics",
+      "semester": "6",
+      "desc": "hello temp description"
     }
     
   ]
