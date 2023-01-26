@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from "next/router";
 
 
-const index = () => {
+const Index = () => {
   const router = useRouter()
   console.log(router.query)
 
@@ -12,4 +12,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
