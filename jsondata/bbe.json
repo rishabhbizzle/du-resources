@@ -3,26 +3,174 @@
   "course": "Bachelors Of Business Economics (BBE)",
   "firstyear": [
     {
-      "subject": "Statistics",
+      "subject": "Microeconomics and Applications I",
       "semester": "1",
       "desc": "hello temp description"
     },
     {
-      "subject": "English",
+      "subject": "Accounting for Managers",
       "semester": "1",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "English A",
+      "semester": "1",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Basics of accounting",
+      "semester": "1",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Business Organisation and Management",
+      "semester": "1",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Mathematics for Business Economics",
+      "semester": "2",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Microeconomics and Applications 2",
+      "semester": "2",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Entrepreneurship",
+      "semester": "2",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Linear Algebra",
+      "semester": "2",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Environmental Studies",
+      "semester": "2",
       "desc": "hello temp description"
     }
   ],
   "secondyear": [
+    {
+      "subject": "Marcro Economics and Applications I",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Statistics for Business Economics",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Corporate Finance",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Intro to Big Data Analytics",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Personality Development",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Money and Banking",
+      "semester": "3",
+      "desc": "hello temp description"
+    },
     {
       "subject": "Economics",
       "semester": "3",
       "desc": "hello temp description"
     },
     {
-      "subject": "Maths",
-      "semester": "3",
+      "subject": "Marcro Economics and Applications 2",
+      "semester": "4",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Basic Econometrics",
+      "semester": "4",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Marketing Management",
+      "semester": "4",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Insurance and Risk Management",
+      "semester": "4",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Public Finance",
+      "semester": "4",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Project Management",
+      "semester": "4",
       "desc": "hello temp description"
     }
+  ],
+  "thirdyear": [
+    {
+      "subject": "Quantitative Techniques for Management",
+      "semester": "5",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Organisational Behaviour",
+      "semester": "5",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Economic growth and development",
+      "semester": "5",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Industrial organisation",
+      "semester": "5",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Consumer behaviour and advertising",
+      "semester": "5",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "International Economics",
+      "semester": "6",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Legal Aspects of Business",
+      "semester": "6",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Indian Economy",
+      "semester": "6",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Environmental Economics",
+      "semester": "6",
+      "desc": "hello temp description"
+    },
+    {
+      "subject": "Marketing Analytics",
+      "semester": "6",
+      "desc": "hello temp description"
+    }
+    
   ]
 }

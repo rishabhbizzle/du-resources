@@ -4,7 +4,12 @@ import Error from "next/error";
 import Link from "next/link";
 import { FirstYearSubjects } from "components/FirstYearSubjects";
 import { SecondYearSubjects } from "components/SecondYearSubjects";
+import { ThirdYearSubjects } from "components/ThirdYearSubjects";
+import { promises as fs } from 'fs';
+import path from 'path';
 // import styles from '../../styles/BlogPost.module.css';
+
+
 
 const Slug = (props) => {
   const router = useRouter();
@@ -31,7 +36,7 @@ const Slug = (props) => {
     setThird(true);
   };
   // console.log(router.query);
-  const { slug } = router.query;
+  // const { slug } = router.query;
   // console.log(props.subject)
   // console.log(props.data);
 
@@ -40,7 +45,7 @@ const Slug = (props) => {
   }
 
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full bg-black pt-20">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <h1 className="mt-8 mb-8 text-center text-6xl font-bold text-white">{props.data.course}</h1>
         {/* <Link href={`${router.asPath}/statistics`}>
@@ -73,6 +78,7 @@ const Slug = (props) => {
         
         {first && <FirstYearSubjects data={props.data} />}
         {second && <SecondYearSubjects data={props.data} />}
+        {third && <ThirdYearSubjects data={props.data} />}
 
       </div>
     </div>
@@ -83,13 +89,24 @@ export async function getServerSideProps(context) {
   // console.log(context.query);
   // const router = useRouter();
   const slug = context.query.slug;
+  const jsonDirectory = path.join(process.cwd(), 'jsondata')
+  console.log(jsonDirectory)
+  let data = {}
+  try {
+    const contents = await fs.readFile(jsonDirectory + `/${slug}.json`, 'utf-8');
+    data = JSON.parse(contents);
+    console.log(data)
 
-  let api = await fetch(`https://du-resources.vercel.app/api/getCourse?course=${slug}`);
-  console.log(api.status);
-  let data = await api.json();
+  } catch (error) {
+    data = {error: true};
+  }
   return {
-    props: { data }, // will be passed to the page component as props
+    props: {data} , // will be passed to the page component as props
   };
+  // let api = await fetch(`http://localhost:3000/api/getCourse?course=${slug}`);
+  // // console.log(api.status);
+  // let data = await api.json();
+  
 }
 
 export default Slug;
