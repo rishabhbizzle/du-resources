@@ -35,6 +35,7 @@ export default function Home() {
                 src="/narutoo.png"
                 width={50}
                 height={50}
+                alt="naruto"
               />
               <Link href="/course/bbe">
               <div className="bg-gray-800 flex justify-center items-center h-28 rounded-lg shadow-lg p-5 relative hover:shadow-xl hover:bg-gray-700 transition-shadow duration-200">
@@ -51,6 +52,7 @@ export default function Home() {
                 src="/narutoo.png"
                 width={50}
                 height={50}
+                alt="naruto"
               />
               <Link href="/course/bcom">
               <div className="bg-gray-800 flex justify-center items-center h-28 rounded-lg shadow-lg p-5 relative hover:shadow-xl hover:bg-gray-700 transition-shadow duration-200">
@@ -68,6 +70,7 @@ export default function Home() {
                 src="/narutoo.png"
                 width={50}
                 height={50}
+                alt="naruto"
               />
               <Link href="/course/ba">
               <div className="bg-gray-800 flex justify-center items-center h-28 rounded-lg shadow-lg p-5 relative hover:shadow-xl hover:bg-gray-700 transition-shadow duration-200">

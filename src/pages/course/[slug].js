@@ -76,7 +76,7 @@ const Slug = (props) => {
           </div>
         </div>
         <div className={first? "": "hidden"}>
-        <YearSubjects data={props.data.firstyear} />
+        <YearSubjects data={props.data.firstyear}  />
         </div>
         <div className={second? "": "hidden"}>
         <YearSubjects data={props.data.secondyear} />
