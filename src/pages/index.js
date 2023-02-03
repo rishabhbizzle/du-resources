@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-gray-900 min-h-screen p-10 items-center">
+      <div className="bg-gray-900 min-h-screen p-10 items-center w-full">
         <div className="max-w-[1000px] mx-auto text-center">
           <h1 className="text-3xl md:text-7xl font-bold text-white">DuAcademia</h1>
           <p className="text-lg text-gray-500 mt-5">

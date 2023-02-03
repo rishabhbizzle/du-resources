@@ -1,6 +1,7 @@
-import '@/styles/globals.css'
-import { useState, useEffect } from 'react';
-import Router from 'next/router';
+import "@/styles/globals.css";
+import { useState, useEffect } from "react";
+import Router from "next/router";
+import { TailSpin } from "react-loader-spinner";
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
@@ -25,7 +26,30 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className="bg-gray-900 min-h-screen p-10 items-center w-full">
+          <TailSpin
+            height="80"
+            width="80"
+            color="#6366F1"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{
+              alignItems: "center",
+              justifyContent: "center",
+              position: "fixed",
+              left: "0px",
+              top: "0px",
+              width: "100%",
+              height: "100%",
+              zIndex: "99",
+              textAlign: "center",
+              background: "none",
+              opacity: "0.8",
+            }}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
       ) : (
         <Component {...pageProps} />
       )}
