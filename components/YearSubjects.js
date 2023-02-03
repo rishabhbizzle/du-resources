@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const FirstYearSubjects = ({ data }) => {
+export const YearSubjects = ({ data }) => {
   const router = useRouter();
   // console.log(router);
-  const array = data.firstyear;
+  const array = data;
   return (
     <div className="">
       <div className="grid w-full grid-cols-2 items-center justify-center gap-5 px-4 pb-5 text-white sm:px-8">

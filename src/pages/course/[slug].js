@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Error from "next/error";
 import Link from "next/link";
-import { FirstYearSubjects } from "components/FirstYearSubjects";
-import { SecondYearSubjects } from "components/SecondYearSubjects";
-import { ThirdYearSubjects } from "components/ThirdYearSubjects";
+import { YearSubjects } from "components/YearSubjects";
 import { promises as fs } from 'fs';
 import path from 'path';
 // import styles from '../../styles/BlogPost.module.css';
@@ -14,8 +12,8 @@ import path from 'path';
 const Slug = (props) => {
   const router = useRouter();
   const [first, setFirst] = useState(true);
-  const [second, setSecond] = useState(null);
-  const [third, setThird] = useState(null);
+  const [second, setSecond] = useState(false);
+  const [third, setThird] = useState(false);
 
   const showFirstYear = () => {
     setThird(false);
@@ -45,17 +43,19 @@ const Slug = (props) => {
   }
 
   return (
-    <div className="w-full bg-black pt-20">
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <h1 className="mt-8 mb-8 text-center text-6xl font-bold text-white">{props.data.course}</h1>
+    <div className="bg-gray-900 min-h-screen w-full p-10 items-center">
+      <div className="max-w-[1000px] mx-auto flex flex-col justify-center h-full">
+      <h1 className="text-3xl md:text-7xl font-bold text-white text-center">DuAcademia</h1>
+
+        <h2 className="my-10 text-center text-4xl font-bold text-white">{props.data.course}</h2>
         {/* <Link href={`${router.asPath}/statistics`}>
           <div>FIRST</div>
         </Link> */}
         <div className="mx-auto grid pb-10 grid-cols-3 justify-center text-center text-white xl:grid-cols-3 xl:gap-4 xl:px-20">
-          <div>
+          <div className="w-48">
             <button
               onClick={showFirstYear}
-              className="text-md rounded-xl border-transparent px-6 py-3 font-bold shadow-[rgba(255,255,255,0.50)] transition duration-300 hover:border-[#f5a607] md:text-2xl bg-[#ffffff17]"
+              className={first? "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-indigo-500": "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-gray-800"}
             >
               1st Year
             </button>
@@ -63,23 +63,27 @@ const Slug = (props) => {
           <div>
             <button
             onClick={showSecondYear} 
-            className="text-md rounded-xl border-transparent px-4 py-3 font-bold shadow-[rgba(255,255,255,0.50)] transition duration-300 hover:border-[#f5a607] md:px-6 md:text-2xl bg-[#ffffff17]">
+            className={second? "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-indigo-500": "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-gray-800"}>
               2nd Year
             </button>
           </div>
           <div>
             <button 
             onClick={showThirdYear}
-            className="text-md rounded-xl border-transparent px-4 py-3 font-bold shadow-[rgba(255,255,255,0.50)] transition duration-300 hover:border-[#f5a607] md:px-6 md:text-2xl bg-[#ffffff17]">
+            className={third? "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-indigo-500": "text-md rounded-xl px-6 py-3 font-bold  transition duration-300  md:text-2xl bg-gray-800"}>
               3rd Year
             </button>
           </div>
         </div>
-        
-        {first && <FirstYearSubjects data={props.data} />}
-        {second && <SecondYearSubjects data={props.data} />}
-        {third && <ThirdYearSubjects data={props.data} />}
-
+        <div className={first? "": "hidden"}>
+        <YearSubjects data={props.data.firstyear} />
+        </div>
+        <div className={second? "": "hidden"}>
+        <YearSubjects data={props.data.secondyear} />
+        </div>
+        <div className={third? "": "hidden"}>
+        <YearSubjects data={props.data.thirdyear} />
+        </div>
       </div>
     </div>
   );
